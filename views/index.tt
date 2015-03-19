@@ -25,6 +25,8 @@
           <div id="chart" class="orgChart"></div>
           <div>Hint: You can colapse nodes, by clicking on them.</div>
 
+    <div class=error> <% flash.error %> </div>
+
           <h3><a href="#" id="add_me">Edit</a></h3>
 
 
