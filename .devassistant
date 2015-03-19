@@ -1,0 +1,26 @@
+dependencies:
+- rpm:
+  - perl
+- rpm:
+  - coreutils
+  - perl(Dancer)
+  - perl(ExtUtils::MakeMaker)
+  - perl(strict)
+  - perl(Test::More)
+  - perl(YAML)
+  - perl(warnings)
+  - perl(Dancer::Test)
+- rpm:
+  - perl(FindBin)
+  - perl(Plack::Runner)
+- rpm:
+  - perl(Plack::Handler::FCGI)
+devassistant_version: 0.9.3
+original_kwargs:
+  cgi: true
+  fastcgi: true
+  github: !!python/unicode 'xsuchy'
+  name: !!python/unicode '/home/mirek/projects/testns'
+project_type:
+- perl
+- dancer
