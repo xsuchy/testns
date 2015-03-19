@@ -29,3 +29,9 @@ template: "simple"
 # For session support enable the following line and see Dancer::Session
 # session: "YAML"
 
+db_user: "mirek"
+db_password: "foobar"
+db_hostname: "localhost"
+db_database: "testns"
+db_driver: "mysql"
+
