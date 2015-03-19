@@ -10,6 +10,7 @@ dependencies:
   - perl(YAML)
   - perl(warnings)
   - perl(Dancer::Test)
+  - perl(Dancer::Plugin::FlashMessage)
 - rpm:
   - perl(FindBin)
   - perl(Plack::Runner)

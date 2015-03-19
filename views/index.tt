@@ -29,7 +29,14 @@
 
 
           <div id="addme-content" style="display: none;">
-Here will be the form
+    <form action="<% add_entry_url %>" method="post">
+      <div>
+        <label for="newid">Add child node to parent:</label>
+        <input type="text" size="5" name="newid">
+        <br />
+        <input type="submit" value="Add">
+      </div>
+    </form>
           </div>
 
     <script type="text/javascript">

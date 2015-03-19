@@ -1,8 +1,10 @@
 package testns;
 use Dancer ':syntax';
+use Dancer::Plugin::FlashMessage;
 
 our $VERSION = '0.1';
 
+# render html for subtree of specific id
 sub get_subtree {
     my ($root) = @_;
     my $result = qq|<li>$root|;
@@ -30,12 +32,15 @@ get '/' => sub {
     }
     my $tree;
     if ($sth->rows == 0) {
-      $tree = "Requirements said there will be some rows. Read README.txt and populate DB.";
+      $tree = "";
+      flash error => "Requirements said there will be some rows. Read README.txt and populate DB.";
     } else {
       my ($root) = $sth->fetchrow_array;
       $tree = qq|<ul id="org" style="display:none">| . get_subtree($root) . q|</ul>|;
     }
-    template 'index' => { tree => $tree };
+    template 'index' => { tree => $tree,
+        add_entry_url =>  uri_for('/'),
+    };
 };
 
 true;
