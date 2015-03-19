@@ -23,7 +23,7 @@ sub get_subtree {
     return $result;
 }
 
-get '/' => sub {
+any '/' => sub {
     # I can use Dancer::Plugin::Database, but that would be super-easy.
     # Let show some coding.
     my $sth = $main::testns_dbh->prepare(q|select id from nodes where parent = 0;|);
