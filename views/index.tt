@@ -21,7 +21,7 @@
         <div id="getting-started">
           <h1>Current Tree:</h1>
             
-Here will be the graph
+          <% tree %>
 
           <h3><a href="#" id="add_me">Edit</a></h3>
 
