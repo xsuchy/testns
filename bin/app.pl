@@ -12,6 +12,6 @@ $main::db_driver=config->{'db_driver'};
 $main::dsn=qq|DBI:$main::db_driver:database=$main::db_database;$main::db_options|;
 
 # under mod_perl this will result in no-op and significantly improve performance
-$main::testns_dbh = DBI->connect($main::dsn, $main::db_user, $main::db_password) or die "Error connecting to database\n";
+$main::testns_dbh = DBI->connect($main::dsn, $main::db_user, $main::db_password) or die "Error connecting to database: $DBI::errstr\n";
 
 dance;
