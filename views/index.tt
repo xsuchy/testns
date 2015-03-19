@@ -22,6 +22,8 @@
           <h1>Current Tree:</h1>
             
           <% tree %>
+          <div id="chart" class="orgChart"></div>
+          <div>Hint: You can colapse nodes, by clicking on them.</div>
 
           <h3><a href="#" id="add_me">Edit</a></h3>
 

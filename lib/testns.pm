@@ -5,7 +5,7 @@ our $VERSION = '0.1';
 
 sub get_subtree {
     my ($root) = @_;
-    my $result = qq|<li>$root</li>|;
+    my $result = qq|<li>$root|;
     my $sth = $main::testns_dbh->prepare(q|select id from nodes where parent = ?|);
     if (!$sth->execute($root)) {
         die("Error ". DBI->errstr);
@@ -17,7 +17,8 @@ sub get_subtree {
     if ($subtree) {
         $subtree = qq|<ul>$subtree</ul>|;
     }
-    return $result.$subtree;
+    $result = $result . $subtree . '</li>';
+    return $result;
 }
 
 get '/' => sub {
