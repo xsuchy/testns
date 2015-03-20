@@ -9,11 +9,11 @@ $eumm_version =~ s/_//;
 
 WriteMakefile(
     NAME                => 'testns',
-    AUTHOR              => q{YOUR NAME <youremail@example.com>},
+    AUTHOR              => q{Miroslav Suchy <miroslav@suchy.cz>},
     VERSION_FROM        => 'lib/testns.pm',
-    ABSTRACT            => 'YOUR APPLICATION ABSTRACT',
+    ABSTRACT            => 'Just some test',
     ($eumm_version >= 6.3001
-      ? ('LICENSE'=> 'perl')
+      ? ('LICENSE'=> 'perl, GPL')
       : ()),
     PL_FILES            => {},
     PREREQ_PM => {
