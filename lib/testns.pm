@@ -57,7 +57,7 @@ any '/' => sub {
     my $tree;
     if ($sth->rows == 0) {
       $tree = "";
-      flash error => "Requirements said there will be some rows. Read README.txt and populate DB.";
+      flash error => "Requirements said there will be some rows. Read db part of README.txt and populate DB.";
     } else {
       my ($root) = $sth->fetchrow_array;
       $tree = qq|<ul id="org" style="display:none">| . get_subtree($root, "None") . q|</ul>|;
